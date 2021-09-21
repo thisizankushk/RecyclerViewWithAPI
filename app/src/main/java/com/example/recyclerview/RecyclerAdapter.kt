@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerAdapter(private val context: Context, val Info: List<data>) :
@@ -25,6 +26,8 @@ class RecyclerAdapter(private val context: Context, val Info: List<data>) :
         holder.salary.text = info.employee_salary
 
 
+
+
     }
 
     override fun getItemCount(): Int {
@@ -35,6 +38,7 @@ class RecyclerAdapter(private val context: Context, val Info: List<data>) :
         val name: TextView = itemView.findViewById(R.id.name)
         val age: TextView = itemView.findViewById(R.id.age)
         val salary: TextView = itemView.findViewById(R.id.salary)
+        val card : CardView = itemView.findViewById(R.id.cardview)
 //        val deleteitem: Button = itemView.findViewById(R.id.deletebutton)
 
     }

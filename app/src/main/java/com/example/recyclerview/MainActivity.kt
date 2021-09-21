@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
     private fun getdata() {
         val data: Call<Info> = dataservice.datainstance.getstatedata()
         data.enqueue(object : Callback<Info> {
@@ -35,15 +33,11 @@ class MainActivity : AppCompatActivity() {
                 if (data != null) {
 
 
-
                     layoutManager = LinearLayoutManager(this@MainActivity)
                     recyclerview.layoutManager = layoutManager
 
                     adapter = RecyclerAdapter(this@MainActivity, data.data)
                     recyclerview.adapter = adapter
-
-
-
                     Log.d("DATAISHERE", data.toString())
                 }
             }
